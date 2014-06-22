@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Weather App</title>
+	<link rel="stylesheet" href="css/screen.css">
+	<link rel="stylesheet" href="css/weather.css">
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/tooltipster/3.0.5/css/tooltipster.min.css">
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+	<script src="http://calcroft.co/utilities"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/tooltipster/3.0.5/js/jquery.tooltipster.min.js"></script>
+	<script src="js/cloudy.js"></script>
+	<style>
+		ul.prev-searches-results {
+			text-align: center;
+			font-size: 12.5pt;
+		}
+    	ul.prev-searches-results li{
+    		padding: 5px;
+    	}
+    	ul.prev-searches-results li:hover {
+    		color:rgba(26, 188, 156,.95);
+    		cursor: pointer;
+
+    	}
+    	div.prev-searches-results-top {
+    		color: rgba(255,255,255,.5);
+    		padding-bottom: 5px;
+    		overflow: hidden;
+  			*zoom: 1;
+    	}
+    	div.prev-searches-results-top-left {
+			float: left;
+    	}
+    	div.prev-searches-results-top-right {
+    		float: right;
+    	}
+  	</style>
+</head>
+<body>
+	<div class="container">
+		<header><i id='header' class="wi wi-day-sunny"></i></header>
+		<div id="weather-error" title="Having trouble finding that location, try using e.g. 'Paris,FR'"></div>
+		<input type="text" id="location-entry-box" title="Your entry can't be empty or contain spaces" placeholder='Enter a location' autofocus>
+		<div class="prev-searches"></div>
+		<div class="entry-message">e.g. London,UK&nbsp; &middot; &nbsp;Hit enter to search</div>
+		<div class="results">
+			<div id='res-head' class="results-head results-head-big"></div>
+			<div class="results-head">Now</div>
+			<div class="results-top">
+				<div class='results-top-left'><i id='weather-icon' class=''></i><span style='margin-top:10px;display:block;' id='weather-desc'></span></div>
+				<div class="results-top-right">
+					<div class="results-top-right-top"><i style='padding-right:10px;' title='High temperature' class="fa fa-angle-up hltemp"></i><span id='weather-high'></span>&deg;</div>
+					<div class="results-top-right-bottom"><i style='padding-right:10px;' title='Low temperature' class="fa fa-angle-down hltemp"></i><span id='weather-low'></span>&deg;</div>
+				</div>
+			</div>
+			<div class="results-head">Tomorrow</div>
+			<div class="results-bottom">
+				stuff <br>things
+			</div>
+		</div>
+		<footer>
+			Rob Calcroft &middot; <a href="http://calcroft.co">calcroft.co</a>
+		</footer>
+	</div>
+</body>
+</html>
