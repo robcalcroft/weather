@@ -119,7 +119,7 @@ var app = {
 
 		useWeather : function(weather) {
 			echo(weather);
-			delay(1000, function(){$('#header').removeClass('fa-spin')})
+			setTimeout(function(){$('#header').removeClass('fa-spin')}, 1000);
 			if(weather.cod != 200) {
 				app.weather.weatherErr();
 				return false;
